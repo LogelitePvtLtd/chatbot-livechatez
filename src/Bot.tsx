@@ -5,7 +5,7 @@ import Message from "./Components/Message";
 import {socket, socketID } from './Components/mySocket';
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import {API_URL} from './Components/config';
+import {API_URL, BASE_URL} from './Components/config';
 
 const Bot = ({siteConfig}) => {
   const [admin,setAdmin] = useState(1)
@@ -20,7 +20,7 @@ const Bot = ({siteConfig}) => {
   else if (window.localStorage.getItem('popUpVisible') !==null) {
     const localPopup =  (window.localStorage.getItem('popUpVisible')==='true');
     popUPState = localPopup;
-  }
+  }git
 
  
   let formState =true;
@@ -355,8 +355,8 @@ const Bot = ({siteConfig}) => {
   return (
     <>
         <Frame initialContent={'<!DOCTYPE html><html><head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"></head><body style="background:transparent"><div id="closeFrameBtn"></div></body></html>'} mountTarget='#closeFrameBtn' style={siteConfig.align=="right"?rightBotBtnStyle:leftBotBtnStyle}>
-          <button className="chatbox-open" onClick={openPopUp} style={{border: "0", background:siteConfig.bgcolor,  padding: "15px", color:siteConfig.color, borderRadius: "50%"}}>
-                  <i className="fa fa-comment fa-2x" aria-hidden="true" />
+          <button className="chatbox-open" onClick={openPopUp} style={{border: "0", background:siteConfig.bgcolor,  padding: "12px", color:siteConfig.color, borderRadius: "50%"}}>
+                 <img src={BASE_URL+"img/live-chat-icon.png"} className="img-responsive"/>
           </button>
         </Frame>
         <Frame     
