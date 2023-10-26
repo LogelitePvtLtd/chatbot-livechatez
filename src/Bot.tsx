@@ -20,7 +20,7 @@ const Bot = ({siteConfig}) => {
   else if (window.localStorage.getItem('popUpVisible') !==null) {
     const localPopup =  (window.localStorage.getItem('popUpVisible')==='true');
     popUPState = localPopup;
-  }git
+  }
 
  
   let formState =true;
